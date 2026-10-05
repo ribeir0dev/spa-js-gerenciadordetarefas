@@ -27,6 +27,14 @@ button {
 button:hover {
   background: #0056b3;
 }
+
+/* Adicionado: Foco visível para navegação por teclado (Critério 2.4.7) */
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #0056b3;
+  outline-offset: 2px;
+}
+
 .card {
   background: white;
   padding: 15px;
@@ -36,16 +44,21 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 }
+
+/* Ajustado: Contraste de cores WCAG 2.1 AA (Critério 1.4.3) */
 .erro {
-  color: red;
+  color: #d32f2f;
   font-size: 14px;
   margin-top: 5px;
+  font-weight: bold;
 }
 .sucesso {
-  color: green;
+  color: #1b5e20;
   font-size: 14px;
   margin-top: 5px;
+  font-weight: bold;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -56,6 +69,6 @@ form {
 }
 input {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #767676;
   border-radius: 4px;
 }
