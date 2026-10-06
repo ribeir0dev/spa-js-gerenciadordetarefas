@@ -4,7 +4,7 @@ function renderLista() {
     return `<h2 tabindex="-1" class="page-title">Minhas Tarefas</h2><p>Nenhuma tarefa cadastrada ainda.</p>`;
   }
 
-  // Adicionado aria-label para desambiguar botões de exclusão
+  // Adicionado aria-label para desambiguar botões de exclusão (WCAG 2.1 AA)
   const itensHtml = tarefas.map(t => `
     <div class="card">
       <span>${t.titulo}</span>
@@ -29,6 +29,8 @@ function renderNovo() {
 }
 
 function renderSobre() {
+  // Correção: busca a lista de tarefas atualizada antes de ler o length
+  const tarefas = obterTarefas(); 
   return `
     <h2 tabindex="-1" class="page-title">Resumo das Tarefas</h2>
     <br>
@@ -46,7 +48,7 @@ function navigate(tela) {
   else if (tela === 'novo') app.innerHTML = renderNovo();
   else if (tela === 'sobre') app.innerHTML = renderSobre();
 
-  // Adicionado: Transferência do foco visual para o novo título carregado
+  // Transferência do foco visual para o novo título carregado (WCAG 2.1 AA)
   const pageTitle = app.querySelector('.page-title');
   if (pageTitle) {
     pageTitle.focus();
