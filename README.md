@@ -109,17 +109,26 @@ Não são necessárias ferramentas complexas ou gerenciadores de pacotes de terc
 
 ## 📁 Estrutura de Ficheiros
 
-.
-├── index.html        # Ponto de entrada HTML semântico da SPA
+```text
+gerenciardoretarefas/
 ├── css/
-│   └── main.css      # Estilos globais, estados de foco e acessibilidade de cores
+│   └── main.css          # Estilos globais, estados de foco e acessibilidade
+├── dist/                 # Ficheiros gerados para produção (minificados)
+├── html/
+│   └── index.html        # Ponto de entrada HTML semântico da SPA
+├── imagens/              # Diretório para recursos gráficos
 ├── js/
-│   ├── app.js        # Inicialização e manipulação do formulário/eventos
-│   ├── router.js     # Renderização dinâmica de componentes e gestão de foco
-│   ├── storage.js    # Camada de persistência (localStorage)
-│   └── validation.js # Lógica de validação de dados de entrada
-├── .gitignore        # Ficheiros ignorados pelo versionamento Git
-└── README.md         # Documentação técnica do repositório
+│   ├── app.js            # Inicialização e manipulação do formulário/eventos
+│   ├── router.js         # Renderização dinâmica de componentes e navegação
+│   ├── storage.js        # Camada de persistência (localStorage)
+│   └── validation.js     # Lógica de validação de dados de entrada
+├── node_modules/         # Dependências do projeto (ignorado no Git)
+├── .gitignore            # Ficheiros e pastas ignorados pelo versionamento Git
+├── package-lock.json     # Mapeamento de versões exatas das dependências
+├── package.json          # Configurações do projeto e scripts de build
+├── README.md             # Documentação técnica do repositório
+└── vite.config.js        # Configuração da ferramenta de build e minificação
+```
 
 ---
 
