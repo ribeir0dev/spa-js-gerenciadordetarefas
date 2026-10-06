@@ -113,7 +113,6 @@ Não são necessárias ferramentas complexas ou gerenciadores de pacotes de terc
 gerenciardoretarefas/
 ├── css/
 │   └── main.css          # Estilos globais, estados de foco e acessibilidade
-├── dist/                 # Ficheiros gerados para produção (minificados)
 ├── html/
 │   └── index.html        # Ponto de entrada HTML semântico da SPA
 ├── imagens/              # Diretório para recursos gráficos
@@ -122,7 +121,6 @@ gerenciardoretarefas/
 │   ├── router.js         # Renderização dinâmica de componentes e navegação
 │   ├── storage.js        # Camada de persistência (localStorage)
 │   └── validation.js     # Lógica de validação de dados de entrada
-├── node_modules/         # Dependências do projeto (ignorado no Git)
 ├── .gitignore            # Ficheiros e pastas ignorados pelo versionamento Git
 ├── package-lock.json     # Mapeamento de versões exatas das dependências
 ├── package.json          # Configurações do projeto e scripts de build
